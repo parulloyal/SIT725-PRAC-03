@@ -1,0 +1,11 @@
+{
+  "name": "parulloyal-sit725-2023-t2-prac-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sever.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
