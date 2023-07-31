@@ -4,19 +4,18 @@ let port = process.env.port || 5500;
 
 app.use(express.static(__dirname + '/'));
 
-app.get('/', (req, res)=>{
+app.get('/', function (req, res) {
     res.render('index.html');
 });
 
-app.get('/addTwoNumbers',(req,res)=>{
-    let num1 = req.query.number1; // this should return 1
-    let num2 = req.query.number2; // this should return 2
-    let sum = parseInt(num1) + parseInt(num2);
-    let obj = {statusCode:200, message:'success', data:sum}
-
-    res.json(obj);
+app.get('/addTwoNumbers', function (req, res) {
+    let num1 = req.query.num1;
+    let num2 = req.query.num2;
+    let result = parseInt(num1) + parseInt(num2);
+    let response = { data: result, message: 'sucess', statusCode: 200 }
+    res.json(response);
 });
 
-app.listen(port, ()=>{
-    console.log('server started - 2');
+app.listen(port, () => {
+    console.log('express server started');
 });
