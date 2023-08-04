@@ -2,7 +2,7 @@ let express = require('express');
 let app = express();
 let port = process.env.port || 5500;
 
-app.use(express.static(__dirname + '/'));
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res)=>{
     res.render('index.html');
